@@ -1,0 +1,1 @@
+lic static void main
