@@ -2,6 +2,14 @@ import javax.swing.JOptionPane;
 
 public class Displays {
     private static int roleCount = 0;
+    private static String hunters = "======= Hunter ======= \n";
+    private static String gatherers = "======= Gatherers ======= \n";
+    private static String farmers = "======= Farmers ======= \n";
+    private static String results = """
+            %s
+            %s
+            %s
+            """.formatted(hunters, gatherers, farmers);
 
     String typeOfRole() {
         String choice = JOptionPane.showInputDialog("""
@@ -66,19 +74,25 @@ public class Displays {
         switch (x) {
             case "hunter":
                 Hunter hunter = createHunter();
-                JOptionPane.showMessageDialog(null, hunter.introduction());
+                hunters += hunter.introduction();
                 break;
             case "gatherer":
                 Gatherer gatherer = createGatherer();
-                JOptionPane.showMessageDialog(null, gatherer.introduction());
+                gatherers += gatherer.introduction();
                 break;
             case "farmer":
                 Farmer farmer = createFarmer();
-                JOptionPane.showMessageDialog(null, farmer.introduction());
+                farmers += farmer.introduction();
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Impossible Output");
         }
+        results = """
+            %s
+            %s
+            %s
+            """.formatted(hunters, gatherers, farmers);
+        JOptionPane.showMessageDialog(null, results);
     }
 }
 

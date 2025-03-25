@@ -16,10 +16,8 @@ public class Farmer extends Tribemen {
 
     String introduction() {
         return """
-                Name: %s
-                Tribe: %s
-                Field Size: %f
-                Crop Type: %s
-                """.formatted(getName(), getTribe(), getFieldSize(), getCropType());
+            Name:   Tribe:  Field Size:  Crop Type:
+            %s      %s      %f       %s \n
+            """.formatted(getName(), getTribe(), getFieldSize(), getCropType());
     }
 }

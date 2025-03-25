@@ -18,10 +18,8 @@ public class Gatherer extends Tribemen {
 
     String introduction() {
         return """
-        Name: %s
-        Tribe: %s
-        Collects Medicinal Plants: %b
-        Preferred Season: %s
-        """.formatted(getName(), getTribe(), isCollectsMedicinalPlants(), getPreferredSeason());
+            Name:   Tribe:  Collects Medicinal Plants:  Preferred Season:
+            %s      %s      %b       %d \n
+            """.formatted(getName(), getTribe(), isCollectsMedicinalPlants(), getPreferredSeason());
     }
 }
