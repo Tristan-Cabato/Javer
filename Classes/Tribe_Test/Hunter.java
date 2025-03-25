@@ -19,8 +19,7 @@ public class Hunter extends Tribemen {
 
     String introduction() {
         return """
-            Name:   Tribe:  Weapon:  Skill:
-            %s      %s      %s       %d \n
+            %s      %s      %s       %d
             """.formatted(getName(), getTribe(), getWeapon(), getSkillLevel());
     }
 }

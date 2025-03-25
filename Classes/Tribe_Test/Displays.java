@@ -2,9 +2,21 @@ import javax.swing.JOptionPane;
 
 public class Displays {
     private static int roleCount = 0;
-    private static String hunters = "======= Hunter ======= \n";
-    private static String gatherers = "======= Gatherers ======= \n";
-    private static String farmers = "======= Farmers ======= \n";
+    private static String hunters = """
+    ======= Hunter =======
+    Name:   Tribe:  Weapon:  Skill:
+    
+    """;
+    private static String gatherers = """
+    ======= Gatherers =======
+    Name:   Tribe:  Collects Medicinal Plants:  Preferred Season:
+    
+    """;
+    private static String farmers = """
+    ======= Farmers =======
+    Name:   Tribe:  Field Size:  Crop Type:
+    
+    """;
     private static String results = """
             %s
             %s
