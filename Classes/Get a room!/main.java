@@ -15,14 +15,25 @@ public class main {
         String bookID = book.bookingID = "BOOK2025" + roomNumber + "3";
         String guestID = guest.guestID = "GUEST2025" + "4" + roomNumber;
 
+        int days = book.numberOfNights = Integer.parseInt(JOptionPane.showInputDialog("How many days will you stay?"));
+        double price = 500 * days;
+        String tax = price > 1000 ? "14%" : "5%";
+        price = price > 1000 ? price - (price * 0.14) : price - (price * 0.05);
+
         String name = JOptionPane.showInputDialog("What is your name?");
         String contactNumber = JOptionPane.showInputDialog("What is your contact number?");
         int age = Integer.parseInt(JOptionPane.showInputDialog("How old are you?"));
         String email = JOptionPane.showInputDialog("What is your email address?");
         
         guest = new Guest(name, contactNumber, age, guestID, email);
+        String resulting = """
+                Name: %s
+                Price: %.2f
+                Tax: %s
+                """.formatted(name, price, tax);;
         PrintWriter writer = new PrintWriter("receipts.txt");
-        writer.write(guest.summary());
+        writer.write(resulting);
+        writer.close();
     }
 }
 

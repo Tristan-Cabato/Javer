@@ -28,7 +28,7 @@ public class Booking extends Room {
         try {
             Scanner scan = new Scanner(new FileReader("rooms.txt"));
             while (scan.hasNextLine()) {
-                roomings += scan.nextLine();
+                roomings += scan.nextLine() + "\n";
             }
             scan.close();
         } catch (FileNotFoundException e) {
