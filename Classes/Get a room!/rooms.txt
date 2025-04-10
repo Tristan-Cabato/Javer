@@ -1,0 +1,10 @@
+100, Luxury Room - Available
+101, Double Room - Not Available
+102, Normal Room - Not Available
+103, Normal Room - Available
+104, Double Room - Not Available
+105, Luxury Room - Available
+106, Luxury Room - Not Available
+107, Double Room - Available
+108, Luxury Room - Available
+109, Normal Room - Not Available
